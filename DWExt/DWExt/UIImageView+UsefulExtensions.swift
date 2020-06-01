@@ -11,7 +11,7 @@ import UIKit
 
 extension UIImageView {
     
-    @IBInspectable var imageColor:UIColor{
+    @IBInspectable public var imageColor:UIColor{
         set{
             self.setImageColor(color: newValue)
         }
@@ -20,7 +20,7 @@ extension UIImageView {
         }
     }
     
-    func setImageColor(color: UIColor) {
+    public func setImageColor(color: UIColor) {
         let templateImage = self.image?.withRenderingMode(.alwaysTemplate)
         self.image = templateImage
         self.tintColor = color

@@ -10,7 +10,7 @@ import UIKit
 
 extension UIImage{
     
-    func cropImageToSquare() -> UIImage? {
+    public func cropImageToSquare() -> UIImage? {
         var imageHeight = self.size.height
         var imageWidth = self.size.width
         
@@ -37,7 +37,7 @@ extension UIImage{
         return nil
     }
     
-    func resizeImage(newSize: CGFloat) -> UIImage {
+    public func resizeImage(newSize: CGFloat) -> UIImage {
         let scale = newSize / self.size.width
         let newHeight = self.size.height * scale
         UIGraphicsBeginImageContextWithOptions(CGSize.init(width: newSize, height: newHeight), false, 0.0)

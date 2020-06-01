@@ -10,7 +10,7 @@ import UIKit
 
 extension UITapGestureRecognizer {
     
-    func didTap(text:String, inLabel label: UILabel?) -> Bool {
+    public func didTap(text:String, inLabel label: UILabel?) -> Bool {
         guard let label = label, let str = label.attributedText else  { return false }
         let attrString = NSMutableAttributedString(attributedString: str)
         let targetRange: NSRange = attrString.mutableString.range(of: text, options: .caseInsensitive)

@@ -9,7 +9,7 @@
 import UIKit
 
 extension UITextView{
-    func emojiDisabled()->Bool{
+    public func emojiDisabled()->Bool{
         if (self.textInputMode?.primaryLanguage == "emoji") || (self.textInputMode?.primaryLanguage == nil){
             return false
         }
@@ -17,7 +17,7 @@ extension UITextView{
         return true
     }
     
-    func emojiAndSpaceDisabled(string:String)->Bool{
+    public func emojiAndSpaceDisabled(string:String)->Bool{
         if (self.textInputMode?.primaryLanguage == "emoji") || (self.textInputMode?.primaryLanguage == nil){
             return true;
         }

@@ -9,7 +9,7 @@
 import UIKit
 
 extension UITextField{
-    @IBInspectable var placeholderColor:UIColor {
+    @IBInspectable public var placeholderColor:UIColor {
         set {
             if let placeholder = self.placeholder{
                 self.attributedPlaceholder = NSAttributedString(string:placeholder, attributes: [NSAttributedString.Key.foregroundColor: newValue])
@@ -20,7 +20,7 @@ extension UITextField{
         }
     }
     
-    func emojiDisabled()->Bool{
+    public func emojiDisabled()->Bool{
         if (self.textInputMode?.primaryLanguage == "emoji") || (self.textInputMode?.primaryLanguage == nil){
             return false
         }
@@ -28,7 +28,7 @@ extension UITextField{
         return true
     }
     
-    func emojiAndSpaceDisabled(string:String)->Bool{
+    public func emojiAndSpaceDisabled(string:String)->Bool{
         if (self.textInputMode?.primaryLanguage == "emoji") || (self.textInputMode?.primaryLanguage == nil){
             return false;
         }

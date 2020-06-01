@@ -10,7 +10,7 @@ import UIKit
 
 extension UINavigationController{
     
-    func setAnimationFadeEffect(){
+    public func setAnimationFadeEffect(){
         let transition = CATransition()
         transition.duration = 1
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)

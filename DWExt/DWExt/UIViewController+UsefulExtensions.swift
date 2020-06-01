@@ -16,7 +16,7 @@ extension UIViewController{
         self.view.endEditing(true)
     }
     
-    func presentNavigateOptions(location:CLLocation, locationName:String){
+    public func presentNavigateOptions(location:CLLocation, locationName:String){
         let actionSheet = UIAlertController.init(title: "נא בחר/י אפליקציית ניווט", message: "", preferredStyle: .actionSheet)
         
         let latitude:CLLocationDegrees =  location.coordinate.latitude

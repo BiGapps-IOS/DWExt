@@ -9,7 +9,7 @@
 import UIKit
 
 extension UITableView{
-    func monkeyButton(){
+    public func monkeyButton(){
         self.isUserInteractionEnabled = false
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.isUserInteractionEnabled = true

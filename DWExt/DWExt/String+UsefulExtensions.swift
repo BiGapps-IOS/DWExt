@@ -10,23 +10,22 @@ import Foundation
 import var CommonCrypto.CC_MD5_DIGEST_LENGTH
 import func CommonCrypto.CC_MD5
 import typealias CommonCrypto.CC_LONG
-//import libPhoneNumber_iOS
 
 extension String{
     
-    var toInt:Int{
+    public var toInt:Int{
         return Int(self) ?? 0
     }
     
-    var toDouble: Double? {
+    public var toDouble: Double? {
         return Double(self)
     }
     
-    var localized:String {
+    public var localized:String {
         return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
     }
     
-    func toast(_ interval: Double? = nil){
+    public func toast(_ interval: Double? = nil){
         if let interval = interval {
             DTIToastCenter.defaultCenter.makeText(text: self, timeInterval:interval)
         }else{
@@ -34,14 +33,14 @@ extension String{
         }
     }
     
-    func isEmailValid() -> Bool {
+    public func isEmailValid() -> Bool {
         let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)
         return emailPredicate.evaluate(with: self)
         
     }
     
-    func isFullNameValid() -> Bool {
+    public func isFullNameValid() -> Bool {
         
         //let fullNameFormat = "[א-תa-zA-Z]{2,15}+[ ][א-תa-zA-Z]{2,15}"
         let fullNameFormat = "([א-תa-zA-Z]{2,}[ ]){1,3}+[א-תa-zA-Z]{2,}"
@@ -49,14 +48,14 @@ extension String{
         return fullNamePredicate.evaluate(with: self)
         
     }
-    func isHebrew() -> Bool {
+    public func isHebrew() -> Bool {
         
         let fullNameFormat = "[א-ת 0-9,]{0,}"
         let fullNamePredicate = NSPredicate(format:"SELF MATCHES %@", fullNameFormat)
         return fullNamePredicate.evaluate(with: self)
         
     }
-    func isHebrew_() -> Bool {
+    public func isHebrew_() -> Bool {
         
         let fullNameFormat = "[\"א-ת 0-9,-]{0,}"
         let fullNamePredicate = NSPredicate(format:"SELF MATCHES %@", fullNameFormat)
@@ -64,13 +63,13 @@ extension String{
         
     }
     
-    func stringToDate() -> Date {
+    public func toDate() -> Date {
         let formatter = DateFormatter()
         formatter.dateFormat = "d MMM yyyy"
         return formatter.date(from: self)!
     }
     
-    func isNameValid() -> Bool{
+    public func isNameValid() -> Bool{
         do{
             let regex = try NSRegularExpression(pattern: "^[א-תa-zA-Z ]{2,12}$", options: .caseInsensitive)
             if regex.matches(in: self, options: [], range: NSMakeRange(0, self.count)).count > 0 {return true}
@@ -101,12 +100,12 @@ extension String{
 //    }
     
     
-    var condensedWhitespace: String {
+    public var condensedWhitespace: String {
         let components = self.components(separatedBy: NSCharacterSet.whitespacesAndNewlines)
         return components.filter { !$0.isEmpty }.joined(separator: " ")
     }
     
-    var toMD5: String {
+    public var toMD5: String {
         let length = Int(CC_MD5_DIGEST_LENGTH)
         let messageData = self.data(using:.utf8)!
         var digestData = Data(count: length)

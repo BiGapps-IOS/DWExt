@@ -10,7 +10,7 @@ import Foundation
 
 extension Int{
     
-    var toString: String{
+    public var toString: String{
         return "\(self)"
     }
 }

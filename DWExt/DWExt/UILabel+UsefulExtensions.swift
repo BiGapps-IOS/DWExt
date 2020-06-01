@@ -10,7 +10,7 @@ import UIKit
 
 extension UILabel{
     
-    @IBInspectable var isAdjustFontToSizeWidth: Bool{
+    @IBInspectable public var isAdjustFontToSizeWidth: Bool{
         set {
             self.adjustsFontSizeToFitWidth = newValue
         }

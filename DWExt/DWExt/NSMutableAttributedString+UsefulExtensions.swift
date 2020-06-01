@@ -20,20 +20,9 @@ extension NSMutableAttributedString {
         return false
     }
     
-//    @discardableResult func bold(_ text: String, fontSize:CGFloat = 17, color:UIColor = .black, alignment:NSTextAlignment = .right) -> NSMutableAttributedString {
-//        let style = NSMutableParagraphStyle()
-//        style.alignment = alignment
-//        let attrs: [NSAttributedString.Key: Any] = [.font: UIFont(name: "VarelaRound-Bold", size: fontSize)!, .foregroundColor:color, .paragraphStyle:style]
-//        let boldString = NSMutableAttributedString(string:text, attributes: attrs)
-//        append(boldString)
-//
-//        return self
-//    }
-    
-    @discardableResult func normal(_ text: String, isMedium: Bool = false, fontSize:CGFloat = 17, color:UIColor = .black, alignment:NSTextAlignment = .center, lineSpacing:CGFloat = 2) -> NSMutableAttributedString {
+    @discardableResult public func normal(_ text: String, isMedium: Bool = false, fontSize:CGFloat = 17, color:UIColor = .black, alignment:NSTextAlignment = .center) -> NSMutableAttributedString {
         let style = NSMutableParagraphStyle()
         style.alignment = alignment
-        //style.lineSpacing = lineSpacing
         let attrs: [NSAttributedString.Key: Any] = [.font: isMedium ? UIFont(name: "Rubik-Medium", size: fontSize)! : UIFont(name: "Rubik-Regular", size: fontSize)!, .foregroundColor:color, .paragraphStyle:style]
         let normal = NSMutableAttributedString(string:text, attributes: attrs)
         append(normal)
@@ -41,7 +30,7 @@ extension NSMutableAttributedString {
         return self
     }
     
-    @discardableResult func strikethrough(_ text: String, isStrike: Bool = true, isMedium: Bool = false, fontSize:CGFloat = 17, color:UIColor = .black, alignment:NSTextAlignment = .center, lineSpacing:CGFloat = 2) -> NSMutableAttributedString {
+    @discardableResult public func strikethrough(_ text: String, isStrike: Bool = true, isMedium: Bool = false, fontSize:CGFloat = 17, color:UIColor = .black, alignment:NSTextAlignment = .center) -> NSMutableAttributedString {
         let style = NSMutableParagraphStyle()
         style.alignment = alignment
         let attrs: [NSAttributedString.Key: Any] = [.font: isMedium ? UIFont(name: "Rubik-Medium", size: fontSize)! : UIFont(name: "Rubik-Regular", size: fontSize)!, .foregroundColor:color, .paragraphStyle:style]
@@ -58,10 +47,9 @@ extension NSMutableAttributedString {
         return self
     }
     
-    @discardableResult func underlined(_ text: String, fontSize:CGFloat = 17, color:UIColor = .black, alignment:NSTextAlignment = .center, lineSpacing:CGFloat = 2) -> NSMutableAttributedString {
+    @discardableResult public func underlined(_ text: String, fontSize:CGFloat = 17, color:UIColor = .black, alignment:NSTextAlignment = .center) -> NSMutableAttributedString {
         let style = NSMutableParagraphStyle()
         style.alignment = alignment
-        //style.lineSpacing = lineSpacing
         let attrs: [NSAttributedString.Key: Any] = [.font: UIFont(name: "Assistant-Regular", size: fontSize)!, .foregroundColor:color, .paragraphStyle:style, .underlineStyle: NSUnderlineStyle.single.rawValue]
         let underlined = NSMutableAttributedString(string:text, attributes: attrs)
         append(underlined)

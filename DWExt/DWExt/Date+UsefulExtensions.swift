@@ -10,7 +10,7 @@ import Foundation
 
 extension Date{
     
-    var formattedWeekDayString: String{
+    public var weekDay: String{
         get{
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "EEEE"
@@ -19,7 +19,7 @@ extension Date{
         }
     }
     
-    var formattedHebrewWeekDayString: String{
+    public var weekDayHebrew: String{
         get{
             let dateFormatter = DateFormatter()
             dateFormatter.locale = .init(identifier: "he_IL")
@@ -29,7 +29,7 @@ extension Date{
         }
     }
     
-    var formattedHebrewYearString: String{
+    public var yearHebrew: String{
         get{
             let hebrew = Calendar(identifier: .hebrew)
             let formatter = DateFormatter()
@@ -42,7 +42,7 @@ extension Date{
         }
     }
     
-    var formattedHebrewMonthString: String{
+    public var monthHebrew: String{
         get{
             let hebrew = Calendar(identifier: .hebrew)
             let formatter = DateFormatter()
@@ -55,7 +55,7 @@ extension Date{
         }
     }
     
-    var formattedHebrewDayString: String{
+    public var dayHebrew: String{
         get{
             let hebrew = Calendar(identifier: .hebrew)
             let formatter = DateFormatter()
@@ -68,7 +68,7 @@ extension Date{
         }
     }
     
-    var formattedHebrewString: String{
+    public var dateHebrew: String{
         get{
             let hebrew = Calendar(identifier: .hebrew)
             let formatter = DateFormatter()
@@ -80,7 +80,7 @@ extension Date{
         }
     }
     
-    var formattedTimeString: String{
+    public var time: String{
         get{
             let formatter = DateFormatter()
             formatter.dateFormat = "HH:mm"
@@ -88,7 +88,7 @@ extension Date{
         }
     }
     
-    var formattedExpDateString: String{
+    public var fullDateSlashSep: String{
         get{
             let formatter = DateFormatter()
             formatter.dateFormat = "dd/MM/yyyy"
@@ -96,21 +96,21 @@ extension Date{
         }
     }
     
-    var formattedDateString:String {
+    public var fullDateSpaceSep:String {
         get{
             let formatter = DateFormatter()
             formatter.dateFormat = "d MMM yyyy"
             return formatter.string(from: self)
         }
     }
-    var formattedFullDateString:String {
+    public var fullDateDotSep:String {
         get{
             let formatter = DateFormatter()
             formatter.dateFormat = "dd.MM.yy"
             return formatter.string(from: self)
         }
     }
-    var formattedDateString2:String {
+    public var fullDateWithTime:String {
         get{
             let formatter = DateFormatter()
             formatter.dateFormat = "HH:mm dd.MM.yyyy"
@@ -120,31 +120,31 @@ extension Date{
     
     
     /// Returns the amount of years from another date
-    var years:Int {
+    public var years:Int {
         return Calendar.current.dateComponents([.year], from: Date(), to: self).year ?? 0
     }
     /// Returns the amount of months from another date
-    var months:Int {
+    public var months:Int {
         return Calendar.current.dateComponents([.month], from: Date(), to: self).month ?? 0
     }
     /// Returns the amount of weeks from another date
-    var weeks:Int {
+    public var weeks:Int {
         return Calendar.current.dateComponents([.weekOfMonth], from: Date(), to: self).weekOfMonth ?? 0
     }
     /// Returns the amount of days from another date
-    var days:Int {
+    public var days:Int {
         return Calendar.current.dateComponents([.day], from: Date(), to: self).day ?? 0
     }
     /// Returns the amount of hours from another date
-    var hours:Int {
+    public var hours:Int {
         return Calendar.current.dateComponents([.hour], from: self).hour ?? 0
     }
     /// Returns the amount of minutes from another date
-    var minutes:Int {
+    public var minutes:Int {
         return Calendar.current.dateComponents([.minute], from: self).minute ?? 0
     }
     /// Returns the amount of seconds from another date
-    var seconds:Int {
+    public var seconds:Int {
         return Calendar.current.dateComponents([.second], from: Date(), to: self).second ?? 0
     }
 }

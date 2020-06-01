@@ -26,7 +26,7 @@ class HitTracableView: UIView {
 extension UIView{
     
     //MARK: - INSPECTABLE
-    @IBInspectable var isCircle:Bool {
+    @IBInspectable public var isCircle:Bool {
         set {
             if newValue == true{
                 layer.cornerRadius = self.bounds.size.width/2.0
@@ -41,7 +41,7 @@ extension UIView{
             return false
         }
     }
-    @IBInspectable var cornerRadius:CGFloat {
+    @IBInspectable public var cornerRadius:CGFloat {
         set {
             layer.cornerRadius = newValue
             layer.masksToBounds = true
@@ -50,7 +50,7 @@ extension UIView{
             return layer.cornerRadius
         }
     }
-    @IBInspectable var topCornerRadius:CGFloat {
+    @IBInspectable public var topCornerRadius:CGFloat {
         set {
             self.setTopRadius(radius: newValue)
         }
@@ -58,7 +58,7 @@ extension UIView{
             return layer.cornerRadius
         }
     }
-    @IBInspectable var bottomCornerRadius:CGFloat {
+    @IBInspectable public var bottomCornerRadius:CGFloat {
         set {
             self.setBottomRadius(radius: newValue)
         }
@@ -66,7 +66,7 @@ extension UIView{
             return layer.cornerRadius
         }
     }
-    @IBInspectable var borderWidth:CGFloat {
+    @IBInspectable public var borderWidth:CGFloat {
         set {
             layer.borderWidth = newValue
         }
@@ -74,7 +74,7 @@ extension UIView{
             return layer.borderWidth
         }
     }
-    @IBInspectable var borderColor:UIColor? {
+    @IBInspectable public var borderColor:UIColor? {
         set {
             layer.borderColor = newValue!.cgColor
         }
@@ -87,7 +87,7 @@ extension UIView{
             }
         }
     }
-    @IBInspectable var firstGradientColor:UIColor?{
+    @IBInspectable public var firstGradientColor:UIColor?{
         set {
             if let color = newValue{
                 let gradientLayer = CAGradientLayer()
@@ -103,7 +103,7 @@ extension UIView{
             return nil
         }
     }
-    @IBInspectable var secondGradientColor:UIColor?{
+    @IBInspectable public var secondGradientColor:UIColor?{
         set {
             if let color = newValue, let sublayers = self.layer.sublayers{
                 for layer in sublayers{
@@ -120,7 +120,7 @@ extension UIView{
             return nil
         }
     }
-    @IBInspectable var horizontalGradient:Bool{
+    @IBInspectable public var horizontalGradient:Bool{
         set{
             if newValue == true, let sublayers = self.layer.sublayers{
                 for layer in sublayers{
@@ -137,7 +137,7 @@ extension UIView{
     }
     
     //MARK: - CLASS METHODS
-    func setCornerCircle(corner:UIRectCorner, radius: CGFloat = 20){
+    public func setCornerCircle(corner:UIRectCorner, radius: CGFloat = 20){
         let path = UIBezierPath(roundedRect:self.bounds,
                                 byRoundingCorners:[corner],
                                 cornerRadii: CGSize(width: radius, height:  radius))
@@ -151,7 +151,7 @@ extension UIView{
         
     }
     
-    func setTopRadius(radius: CGFloat = 20){
+    public func setTopRadius(radius: CGFloat = 20){
         let path = UIBezierPath(roundedRect:self.bounds,
                                 byRoundingCorners:[.topLeft, .topRight],
                                 cornerRadii: CGSize(width: radius, height:  radius))
@@ -164,7 +164,7 @@ extension UIView{
         setBezierBorder(path: path)
         
     }
-    func setBottomRadius(radius: CGFloat = 20){
+    public func setBottomRadius(radius: CGFloat = 20){
         let path = UIBezierPath(roundedRect:self.bounds,
                                 byRoundingCorners:[.bottomLeft, .bottomRight],
                                 cornerRadii: CGSize(width: radius, height:  radius))
@@ -178,7 +178,7 @@ extension UIView{
         
     }
     
-    func setSideCircle(isRightSide:Bool, radius: CGFloat){
+    public func setSideCircle(isRightSide:Bool, radius: CGFloat){
         let topCorner:UIRectCorner = isRightSide ? .topRight : .topLeft
         let bottomCorner:UIRectCorner = isRightSide ? .bottomRight : .bottomLeft
         let path = UIBezierPath(roundedRect:self.bounds,
@@ -194,7 +194,7 @@ extension UIView{
         
     }
     
-    func setBezierBorder(path: UIBezierPath){
+    public func setBezierBorder(path: UIBezierPath){
         path.lineWidth = 5
         
         UIColor.white.setStroke()
@@ -206,7 +206,7 @@ extension UIView{
     }
     
     
-    var parentViewController: UIViewController? {
+    public var parentViewController: UIViewController? {
         var parentResponder: UIResponder? = self
         while parentResponder != nil {
             parentResponder = parentResponder!.next
@@ -217,7 +217,7 @@ extension UIView{
         return nil
     }
     
-    func dropShadow(onlyBottom:Bool = false, color:UIColor = UIColor.lightGray, raduis: CGFloat = 5, opacity: Float = 1){
+    public func dropShadow(onlyBottom:Bool = false, color:UIColor = UIColor.lightGray, raduis: CGFloat = 5, opacity: Float = 1){
         layer.masksToBounds = false
         layer.shadowColor = color.cgColor
         layer.shadowOpacity = opacity
@@ -227,11 +227,11 @@ extension UIView{
 
 
     
-    func constraint(withIdentifier:String) -> NSLayoutConstraint? {
+    public func constraint(withIdentifier:String) -> NSLayoutConstraint? {
         return self.constraints.filter{ $0.identifier == withIdentifier }.first
     }
     
-    func shakeView() {
+    public func shakeView() {
         let shake = CABasicAnimation(keyPath: "position")
         let xDelta = CGFloat(5)
         shake.duration = 0.03

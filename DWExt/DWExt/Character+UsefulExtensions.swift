@@ -25,33 +25,33 @@ extension Character {
             unicodeScalars.contains { $0.properties.isJoinControl || $0.properties.isVariationSelector }
     }
 
-    var isEmoji: Bool {
+    public var isEmoji: Bool {
         return isSimpleEmoji || isCombinedIntoEmoji
     }
 }
 
 extension String {
-    var isSingleEmoji: Bool {
+    public var isSingleEmoji: Bool {
         return count == 1 && containsEmoji
     }
 
-    var containsEmoji: Bool {
+    public var containsEmoji: Bool {
         return contains { $0.isEmoji }
     }
 
-    var containsOnlyEmoji: Bool {
+    public var containsOnlyEmoji: Bool {
         return !isEmpty && !contains { !$0.isEmoji }
     }
 
-    var emojiString: String {
+    public var emojiString: String {
         return emojis.map { String($0) }.reduce("", +)
     }
 
-    var emojis: [Character] {
+    public var emojis: [Character] {
         return filter { $0.isEmoji }
     }
 
-    var emojiScalars: [UnicodeScalar] {
+    public var emojiScalars: [UnicodeScalar] {
         return filter{ $0.isEmoji }.flatMap { $0.unicodeScalars }
     }
 }

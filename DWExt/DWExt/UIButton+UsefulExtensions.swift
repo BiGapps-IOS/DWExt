@@ -10,7 +10,7 @@ import UIKit
 
 extension UIButton{
     
-    @IBInspectable var isAdjustFontToSizeWidth: Bool{
+    @IBInspectable public var isAdjustFontToSizeWidth: Bool{
         set {
             self.titleLabel?.adjustsFontSizeToFitWidth = newValue
         }
@@ -19,7 +19,7 @@ extension UIButton{
         }
     }
     
-    @IBInspectable var imageColor:UIColor{
+    @IBInspectable public var imageColor:UIColor{
         set{
             self.setImageColor(color: newValue)
         }
@@ -28,13 +28,13 @@ extension UIButton{
         }
     }
     
-    func setImageColor(color: UIColor) {
+    public func setImageColor(color: UIColor) {
         let templateImage = self.imageView?.image?.withRenderingMode(.alwaysTemplate)
         self.imageView?.image = templateImage
         self.imageView?.tintColor = color
     }
     
-    func monkeyButton(){
+    public func monkeyButton(){
         self.isUserInteractionEnabled = false
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.isUserInteractionEnabled = true

@@ -10,19 +10,19 @@ import Foundation
 
 extension Double{
     
-    var toString: String{
+    public var toString: String{
         return "\(self)"
     }
     
-    var clean: String{
+    public var rounded2F: String{
         return String(format: "%.2f", self)
     }
     
-    var clean2: String{
+    public var clean: String{
         return self.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : String(self)
     }
     
-    var rounded2f: String{
+    public var rounded1f: String{
         return String(format: "%.1f", self)
     }
     
