@@ -13,6 +13,10 @@ import typealias CommonCrypto.CC_LONG
 
 extension String{
     
+    public var trim: String {
+        return self.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+    
     public var toInt:Int{
         return Int(self) ?? 0
     }

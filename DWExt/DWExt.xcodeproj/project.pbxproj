@@ -12,7 +12,6 @@
 		92A01AE02483F44300EB3807 /* DTIToastCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A01AC82483F44200EB3807 /* DTIToastCenter.swift */; };
 		92A01AE12483F44300EB3807 /* Date+UsefulExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A01AC92483F44200EB3807 /* Date+UsefulExtensions.swift */; };
 		92A01AE22483F44300EB3807 /* String+UsefulExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A01ACA2483F44200EB3807 /* String+UsefulExtensions.swift */; };
-		92A01AE32483F44300EB3807 /* NSMutableAttributedString+UsefulExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A01ACB2483F44200EB3807 /* NSMutableAttributedString+UsefulExtensions.swift */; };
 		92A01AE42483F44300EB3807 /* CGRect+DTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A01ACC2483F44200EB3807 /* CGRect+DTI.swift */; };
 		92A01AE52483F44300EB3807 /* UIImage+UsefulExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A01ACD2483F44200EB3807 /* UIImage+UsefulExtensions.swift */; };
 		92A01AE62483F44300EB3807 /* DWExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 92A01ACE2483F44200EB3807 /* DWExtensions.h */; };
@@ -42,7 +41,6 @@
 		92A01AC82483F44200EB3807 /* DTIToastCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTIToastCenter.swift; sourceTree = "<group>"; };
 		92A01AC92483F44200EB3807 /* Date+UsefulExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+UsefulExtensions.swift"; sourceTree = "<group>"; };
 		92A01ACA2483F44200EB3807 /* String+UsefulExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+UsefulExtensions.swift"; sourceTree = "<group>"; };
-		92A01ACB2483F44200EB3807 /* NSMutableAttributedString+UsefulExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+UsefulExtensions.swift"; sourceTree = "<group>"; };
 		92A01ACC2483F44200EB3807 /* CGRect+DTI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+DTI.swift"; sourceTree = "<group>"; };
 		92A01ACD2483F44200EB3807 /* UIImage+UsefulExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+UsefulExtensions.swift"; sourceTree = "<group>"; };
 		92A01ACE2483F44200EB3807 /* DWExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWExtensions.h; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 				92A01ADD2483F44300EB3807 /* DTIToastView.swift */,
 				92A01ACE2483F44200EB3807 /* DWExtensions.h */,
 				92A01ADC2483F44300EB3807 /* Int+UsefulExtensions.swift */,
-				92A01ACB2483F44200EB3807 /* NSMutableAttributedString+UsefulExtensions.swift */,
 				92A01AC72483F44200EB3807 /* NSNotification.Name+UsefulExtensions.swift */,
 				92A01AD02483F44200EB3807 /* String+DTI.swift */,
 				92A01ACA2483F44200EB3807 /* String+UsefulExtensions.swift */,
@@ -223,7 +220,6 @@
 				92A01AF52483F44300EB3807 /* DTIToastView.swift in Sources */,
 				92A01AE22483F44300EB3807 /* String+UsefulExtensions.swift in Sources */,
 				92A01AE82483F44300EB3807 /* String+DTI.swift in Sources */,
-				92A01AE32483F44300EB3807 /* NSMutableAttributedString+UsefulExtensions.swift in Sources */,
 				92A01AE72483F44300EB3807 /* Character+UsefulExtensions.swift in Sources */,
 				92A01ADF2483F44300EB3807 /* NSNotification.Name+UsefulExtensions.swift in Sources */,
 				92A01AEF2483F44300EB3807 /* UIViewController+UsefulExtensions.swift in Sources */,
@@ -359,6 +355,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3A2786C649;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -387,6 +384,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3A2786C649;
 				DYLIB_COMPATIBILITY_VERSION = 1;

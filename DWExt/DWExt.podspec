@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "DWExt"
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
   spec.summary      = "This is my first pod"
   spec.description  = "My Useful extensions"
   spec.homepage     = "https://github.com/BiGapps-IOS/DWExt"
