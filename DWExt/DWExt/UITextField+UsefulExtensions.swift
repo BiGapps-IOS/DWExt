@@ -7,6 +7,49 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+
+
+extension UITextField {
+    
+    
+    public func dwAction(_ disposeBag: DisposeBag, limitChars: Int = 0, isLetters: Bool = false, returnDidTap: (()->())?, binder: BehaviorRelay<String?>){
+        
+        self.rx.text.orEmpty.scan("") { (prev, new) -> String in
+            if new.containsEmoji || (limitChars > 0 && new.count > limitChars) || (isLetters && new.containsNumbers) {
+                return prev ?? ""
+            }else{
+                return new
+            }
+        }.subscribe(self.rx.text).disposed(by: disposeBag)
+        
+        self.rx.controlEvent([.editingDidEndOnExit]).subscribe(onNext: { _ in
+            returnDidTap?()
+        }).disposed(by: disposeBag)
+        
+        self.rx.text.bind(to: binder).disposed(by: disposeBag)
+        
+    }
+    
+    public func returnDidTap(_ disposeBag: DisposeBag, subscribe: (()->())?){
+        self.rx.controlEvent([.editingDidEndOnExit]).subscribe(onNext: { _ in
+            subscribe?()
+        }).disposed(by: disposeBag)
+    }
+    
+    public func disableEmoji(_ disposeBag: DisposeBag){
+        self.rx.text.orEmpty.scan("") { (prev, new) -> String in
+            if new.containsEmoji {
+                return prev ?? ""
+            }else{
+                return new
+            }
+        }.subscribe(self.rx.text).disposed(by: disposeBag)
+    }
+    
+}
+
 
 extension UITextField{
     @IBInspectable public var placeholderColor:UIColor {

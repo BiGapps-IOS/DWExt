@@ -8,6 +8,23 @@
 
 import UIKit
 
+
+extension UIButton {
+    
+    @IBInspectable public var numOfLines: Int{
+        set {
+            self.titleLabel?.numberOfLines = newValue
+            self.titleLabel?.textAlignment = .center
+            self.titleLabel?.adjustsFontSizeToFitWidth = true
+        }
+        get {
+            self.titleLabel?.numberOfLines ?? 0
+        }
+    }
+    
+}
+
+
 extension UIButton{
     
     @IBInspectable public var isAdjustFontToSizeWidth: Bool{

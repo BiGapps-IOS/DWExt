@@ -11,6 +11,30 @@ import var CommonCrypto.CC_MD5_DIGEST_LENGTH
 import func CommonCrypto.CC_MD5
 import typealias CommonCrypto.CC_LONG
 
+
+extension String {
+    
+    public var toBool: Bool {
+        return self == "1" ? true : false
+    }
+    
+    public var containsNumbers: Bool {
+        let decimalCharacters = CharacterSet.decimalDigits
+        let decimalRange = self.rangeOfCharacter(from: decimalCharacters)
+        return decimalRange != nil
+    }
+    
+    public func isFullNameValid() -> Bool {
+        
+        //let fullNameFormat = "[א-תa-zA-Z]{2,15}+[ ][א-תa-zA-Z]{2,15}"
+        let fullNameFormat = "([א-תa-zA-Zء-ي]{2,}[ ]){1,3}+[א-תa-zA-Zء-ي]{2,}"
+        let fullNamePredicate = NSPredicate(format:"SELF MATCHES %@", fullNameFormat)
+        return fullNamePredicate.evaluate(with: self)
+        
+    }
+    
+}
+
 extension String{
     
     public var trim: String {
@@ -44,14 +68,14 @@ extension String{
         
     }
     
-    public func isFullNameValid() -> Bool {
-        
-        //let fullNameFormat = "[א-תa-zA-Z]{2,15}+[ ][א-תa-zA-Z]{2,15}"
-        let fullNameFormat = "([א-תa-zA-Z]{2,}[ ]){1,3}+[א-תa-zA-Z]{2,}"
-        let fullNamePredicate = NSPredicate(format:"SELF MATCHES %@", fullNameFormat)
-        return fullNamePredicate.evaluate(with: self)
-        
-    }
+//    public func isFullNameValid() -> Bool {
+//        
+//        //let fullNameFormat = "[א-תa-zA-Z]{2,15}+[ ][א-תa-zA-Z]{2,15}"
+//        let fullNameFormat = "([א-תa-zA-Z]{2,}[ ]){1,3}+[א-תa-zA-Z]{2,}"
+//        let fullNamePredicate = NSPredicate(format:"SELF MATCHES %@", fullNameFormat)
+//        return fullNamePredicate.evaluate(with: self)
+//        
+//    }
     public func isHebrew() -> Bool {
         
         let fullNameFormat = "[א-ת 0-9,]{0,}"

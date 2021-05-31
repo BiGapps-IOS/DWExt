@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		920C5C722664BF2A00E486E2 /* Array+UsefulExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C5C712664BF2A00E486E2 /* Array+UsefulExtensions.swift */; };
+		920C5C752664C05300E486E2 /* AnimatedSink+UsefulExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C5C742664C05300E486E2 /* AnimatedSink+UsefulExtensions.swift */; };
 		92A01AC12483F40E00EB3807 /* DWExt.h in Headers */ = {isa = PBXBuildFile; fileRef = 92A01ABF2483F40E00EB3807 /* DWExt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92A01ADF2483F44300EB3807 /* NSNotification.Name+UsefulExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A01AC72483F44200EB3807 /* NSNotification.Name+UsefulExtensions.swift */; };
 		92A01AE02483F44300EB3807 /* DTIToastCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A01AC82483F44200EB3807 /* DTIToastCenter.swift */; };
@@ -31,9 +33,14 @@
 		92A01AF42483F44300EB3807 /* Int+UsefulExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A01ADC2483F44300EB3807 /* Int+UsefulExtensions.swift */; };
 		92A01AF52483F44300EB3807 /* DTIToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A01ADD2483F44300EB3807 /* DTIToastView.swift */; };
 		92A01AF62483F44300EB3807 /* Double+UsefulExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A01ADE2483F44300EB3807 /* Double+UsefulExtensions.swift */; };
+		B0FAA5954A25205494B015B7 /* Pods_DWExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFF361E7C678C11960C4A99 /* Pods_DWExt.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		62781D341164780E96003827 /* Pods-DWExt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWExt.debug.xcconfig"; path = "Target Support Files/Pods-DWExt/Pods-DWExt.debug.xcconfig"; sourceTree = "<group>"; };
+		7BFF361E7C678C11960C4A99 /* Pods_DWExt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DWExt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		920C5C712664BF2A00E486E2 /* Array+UsefulExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+UsefulExtensions.swift"; sourceTree = "<group>"; };
+		920C5C742664C05300E486E2 /* AnimatedSink+UsefulExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimatedSink+UsefulExtensions.swift"; sourceTree = "<group>"; };
 		92A01ABC2483F40E00EB3807 /* DWExt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DWExt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A01ABF2483F40E00EB3807 /* DWExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWExt.h; sourceTree = "<group>"; };
 		92A01AC02483F40E00EB3807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +67,7 @@
 		92A01ADC2483F44300EB3807 /* Int+UsefulExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+UsefulExtensions.swift"; sourceTree = "<group>"; };
 		92A01ADD2483F44300EB3807 /* DTIToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTIToastView.swift; sourceTree = "<group>"; };
 		92A01ADE2483F44300EB3807 /* Double+UsefulExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+UsefulExtensions.swift"; sourceTree = "<group>"; };
+		C3D6D9580DF5180E125098DD /* Pods-DWExt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWExt.release.xcconfig"; path = "Target Support Files/Pods-DWExt/Pods-DWExt.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,17 +75,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0FAA5954A25205494B015B7 /* Pods_DWExt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20822749CEC1884942AA0C33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BFF361E7C678C11960C4A99 /* Pods_DWExt.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		92A01AB22483F40E00EB3807 = {
 			isa = PBXGroup;
 			children = (
 				92A01ABE2483F40E00EB3807 /* DWExt */,
 				92A01ABD2483F40E00EB3807 /* Products */,
+				E28C2CF5F9EC08843BD4F98E /* Pods */,
+				20822749CEC1884942AA0C33 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +113,7 @@
 			children = (
 				92A01ABF2483F40E00EB3807 /* DWExt.h */,
 				92A01AC02483F40E00EB3807 /* Info.plist */,
+				920C5C712664BF2A00E486E2 /* Array+UsefulExtensions.swift */,
 				92A01ACC2483F44200EB3807 /* CGRect+DTI.swift */,
 				92A01ACF2483F44200EB3807 /* Character+UsefulExtensions.swift */,
 				92A01AC92483F44200EB3807 /* Date+UsefulExtensions.swift */,
@@ -117,8 +137,18 @@
 				92A01ADB2483F44300EB3807 /* UITextView+UsefulExtensions.swift */,
 				92A01ADA2483F44300EB3807 /* UIView+UsefulExtensions.swift */,
 				92A01AD72483F44300EB3807 /* UIViewController+UsefulExtensions.swift */,
+				920C5C742664C05300E486E2 /* AnimatedSink+UsefulExtensions.swift */,
 			);
 			path = DWExt;
+			sourceTree = "<group>";
+		};
+		E28C2CF5F9EC08843BD4F98E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62781D341164780E96003827 /* Pods-DWExt.debug.xcconfig */,
+				C3D6D9580DF5180E125098DD /* Pods-DWExt.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +170,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92A01AC42483F40E00EB3807 /* Build configuration list for PBXNativeTarget "DWExt" */;
 			buildPhases = (
+				8455874616872DB6CD715743 /* [CP] Check Pods Manifest.lock */,
 				92A01AB72483F40E00EB3807 /* Headers */,
 				92A01AB82483F40E00EB3807 /* Sources */,
 				92A01AB92483F40E00EB3807 /* Frameworks */,
@@ -197,12 +228,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8455874616872DB6CD715743 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DWExt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		92A01AB82483F40E00EB3807 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				92A01AF62483F44300EB3807 /* Double+UsefulExtensions.swift in Sources */,
+				920C5C722664BF2A00E486E2 /* Array+UsefulExtensions.swift in Sources */,
 				92A01AF22483F44300EB3807 /* UIView+UsefulExtensions.swift in Sources */,
 				92A01AF12483F44300EB3807 /* UIImageView+UsefulExtensions.swift in Sources */,
 				92A01AE12483F44300EB3807 /* Date+UsefulExtensions.swift in Sources */,
@@ -214,6 +271,7 @@
 				92A01AE42483F44300EB3807 /* CGRect+DTI.swift in Sources */,
 				92A01AF02483F44300EB3807 /* UILabel+UsefulExtensions.swift in Sources */,
 				92A01AED2483F44300EB3807 /* UITapGestureRecognizer+UsefulExtensions.swift in Sources */,
+				920C5C752664C05300E486E2 /* AnimatedSink+UsefulExtensions.swift in Sources */,
 				92A01AEC2483F44300EB3807 /* UINavigationController+UsefulExtensions.swift in Sources */,
 				92A01AF42483F44300EB3807 /* Int+UsefulExtensions.swift in Sources */,
 				92A01AE02483F44300EB3807 /* DTIToastCenter.swift in Sources */,
@@ -352,10 +410,11 @@
 		};
 		92A01AC52483F40E00EB3807 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62781D341164780E96003827 /* Pods-DWExt.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3A2786C649;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -381,10 +440,11 @@
 		};
 		92A01AC62483F40E00EB3807 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3D6D9580DF5180E125098DD /* Pods-DWExt.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3A2786C649;
 				DYLIB_COMPATIBILITY_VERSION = 1;
